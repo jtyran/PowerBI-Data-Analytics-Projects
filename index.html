@@ -2,17 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
-
-    <meta
-        name="description"
-        content="An interactive Power BI analytics dashboard."
-    >
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Interactive MLB and fantasy football Power BI analytics dashboards.">
     <title>Power BI Analytics Dashboards</title>
 
     <style>
@@ -29,9 +20,9 @@
         }
 
         header {
+            padding: 55px 20px;
             background: linear-gradient(135deg, #13294b, #0078d4);
             color: white;
-            padding: 55px 20px;
             text-align: center;
         }
 
@@ -51,23 +42,43 @@
             margin: 35px auto;
         }
 
-        .introduction {
-            margin-bottom: 25px;
+        .dashboard-heading {
             text-align: center;
         }
 
-        .introduction h2 {
+        .dashboard-heading h2 {
             color: #13294b;
         }
 
+        .dashboard-project {
+            margin-bottom: 55px;
+        }
+
+        .dashboard-heading {
+            max-width: 800px;
+            margin: 0 auto 20px;
+        }
+
+        .dashboard-heading h2 {
+            margin-bottom: 8px;
+        }
+
+        .dashboard-heading p {
+            margin-top: 0;
+        }
+
         .dashboard-container {
-            overflow: hidden;
             position: relative;
             width: 100%;
-            padding-top: 56.25%;
+            padding-top: 59.77%;
+            overflow: hidden;
             background-color: white;
             border-radius: 12px;
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+        }
+
+        .dashboard-container.fantasy-football {
+            padding-top: 78.52%;
         }
 
         .dashboard-container iframe {
@@ -110,45 +121,67 @@
 <body>
     <header>
         <h1>Power BI Analytics Dashboards</h1>
-
         <p>
-            An interactive dashboard designed to explore important
-            trends, performance indicators, and data-driven insights.
+            Explore interactive sports analytics dashboards featuring
+            performance trends, key metrics, and data-driven insights.
         </p>
     </header>
 
     <main>
-        <section class="introduction">
-            <h2>Dashboard Overview</h2>
+        <article class="dashboard-project">
+            <div class="dashboard-heading">
+                <h2>MLB Analytics Dashboard</h2>
+                <p>
+                    Explore team and player performance across pitching,
+                    batting, fielding, and individual batter profiles.
+                </p>
+            </div>
 
-            <p>
-                Use the interactive reports below to explore the data.
-                Select filters, hover over visuals, and move between
-                report pages to examine the results.
-            </p>
-        </section>
+            <section
+                class="dashboard-container"
+                aria-label="Interactive MLB Power BI dashboard"
+            >
+                <iframe
+                    title="MLB Dashboard"
+                    src="https://app.powerbi.com/view?r=eyJrIjoiMzdjMjFjZjMtZTY5ZS00YThhLTg4ZWQtYWU3OTQ0MTMwNjBiIiwidCI6IjE3MGJiYWJkLWEyZjAtNGM5MC1hZDRiLTBlOGYwZjBjNDI1OSIsImMiOjN9"
+                    allowfullscreen>
+                </iframe>
+            </section>
 
-        <section
-            class="dashboard-container"
-            aria-label="Interactive Power BI dashboard"
-        >
-            <iframe
-                title="MLB Dashboard"
-                src="https://app.powerbi.com/reportEmbed?reportId=7b7da8a8-00ae-4d66-bb33-e2d0ba8195bf&autoAuth=true&ctid=170bbabd-a2f0-4c90-ad4b-0e8f0f0c4259"
-                allowfullscreen="true">
-            </iframe>
-        </section>
+            <section class="project-links">
+                <a
+                    class="button"
+                    href="Visualizing Baseball Metrics in Power BI/Baseball VIZ Project 1.0.pdf"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    View MLB PDF Report
+                </a>
+            </section>
+        </article>
+
+        <article class="dashboard-project">
+            <div class="dashboard-heading">
+                <h2>Fantasy Football Dashboard 2023–24</h2>
+                <p>
+                    Explore fantasy football performance, player trends,
+                    and data-driven insights from the 2023–24 seasons.
+                </p>
+            </div>
+
+            <section
+                class="dashboard-container fantasy-football"
+                aria-label="Interactive fantasy football Power BI dashboard"
+            >
+                <iframe
+                    title="Fantasy Football Dashboard 2023-24"
+                    src="https://app.powerbi.com/view?r=eyJrIjoiYmU4YWIxMDMtMzhkOS00N2VmLWEzZWUtYzBlOGRlY2M5ZDQ3IiwidCI6IjE3MGJiYWJkLWEyZjAtNGM5MC1hZDRiLTBlOGYwZjBjNDI1OSIsImMiOjN9&amp;pageName=ReportSection6a49dcb100428068e8c4"
+                    allowfullscreen>
+                </iframe>
+            </section>
+        </article>
 
         <section class="project-links">
-            <a
-                class="button"
-                href="Visualizing Baseball Metrics in Power BI/Baseball VIZ Project 1.0.pdf"
-                target="_blank"
-                rel="noopener"
-            >
-                View PDF Report
-            </a>
-
             <a
                 class="button"
                 href="https://github.com/jtyran/PowerBI-Data-Analytics-Projects"
