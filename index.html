@@ -1,98 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="A Power BI data analytics project.">
-  <title>MLB Power BI Analytics Dashboard</title>
+    <meta charset="UTF-8">
 
-  <style>
-    * {
-      box-sizing: border-box;
-    }
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-    body {
-      margin: 0;
-      background: #f4f7fb;
-      color: #1f2937;
-      font-family: Arial, Helvetica, sans-serif;
-      line-height: 1.6;
-    }
+    <meta
+        name="description"
+        content="An interactive Power BI analytics dashboard."
+    >
 
-    header {
-      padding: 48px 20px;
-      background: #17365d;
-      color: #ffffff;
-      text-align: center;
-    }
+    <title>Power BI Analytics Dashboards</title>
 
-    header h1 {
-      margin: 0 0 12px;
-      font-size: clamp(2rem, 5vw, 3rem);
-    }
+    <style>
+        * {
+            box-sizing: border-box;
+        }
 
-    header p {
-      max-width: 760px;
-      margin: 0 auto;
-      font-size: 1.1rem;
-    }
+        body {
+            margin: 0;
+            background-color: #f4f7fb;
+            color: #1f2937;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+        }
 
-    main {
-      width: min(1200px, 94%);
-      margin: 36px auto;
-    }
+        header {
+            background: linear-gradient(135deg, #13294b, #0078d4);
+            color: white;
+            padding: 55px 20px;
+            text-align: center;
+        }
 
-    .embed-container {
-      position: relative;
-      width: 100%;
-      padding-top: 56.25%;
-      overflow: hidden;
-      background: #ffffff;
-      border-radius: 12px;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-    }
+        header h1 {
+            margin: 0 0 12px;
+            font-size: clamp(2rem, 5vw, 3rem);
+        }
 
-    .embed-container iframe {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      border: 0;
-    }
+        header p {
+            max-width: 750px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+        }
 
-    footer {
-      padding: 20px;
-      color: #6b7280;
-      text-align: center;
-    }
-  </style>
+        main {
+            width: min(1200px, 94%);
+            margin: 35px auto;
+        }
+
+        .introduction {
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .introduction h2 {
+            color: #13294b;
+        }
+
+        .dashboard-container {
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+            padding-top: 56.25%;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+        }
+
+        .dashboard-container iframe {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .project-links {
+            margin-top: 25px;
+            text-align: center;
+        }
+
+        .button {
+            display: inline-block;
+            margin: 5px;
+            padding: 11px 20px;
+            border-radius: 6px;
+            background-color: #0078d4;
+            color: white;
+            text-decoration: none;
+        }
+
+        .button:hover {
+            background-color: #005ea6;
+        }
+
+        footer {
+            margin-top: 45px;
+            padding: 20px;
+            background-color: #13294b;
+            color: white;
+            text-align: center;
+        }
+    </style>
 </head>
 
 <body>
-  <header>
-    <h1>Power BI Data Analytics Dashboard</h1>
+    <header>
+        <h1>Power BI Analytics Dashboards</h1>
 
-    <p>
-      This interactive MLB Power BI dashboard analyzes team and player performance across pitching, 
-	  batting, and fielding. Users can compare key metrics, explore league-wide trends, 
-	  filter results by team or player, and view detailed batter profiles through dynamic visualizations.
-    </p>
-  </header>
+        <p>
+            An interactive dashboard designed to explore important
+            trends, performance indicators, and data-driven insights.
+        </p>
+    </header>
 
-  <main>
-    <section class="embed-container" aria-label="Embedded Power BI report">
-      <iframe
-        title="MLB Dashboard"
-		width="1140"
-		height="541.25"
-        src="https://app.powerbi.com/reportEmbed?reportId=7b7da8a8-00ae-4d66-bb33-e2d0ba8195bf&autoAuth=true&ctid=170bbabd-a2f0-4c90-ad4b-0e8f0f0c4259"
-        allowfullscreen="true">
-      </iframe>
-    </section>
-  </main>
+    <main>
+        <section class="introduction">
+            <h2>Dashboard Overview</h2>
 
-  <footer>
-    <p>&copy; 2026 Tyran Johnson</p>
-  </footer>
+            <p>
+                Use the interactive reports below to explore the data.
+                Select filters, hover over visuals, and move between
+                report pages to examine the results.
+            </p>
+        </section>
+
+        <section
+            class="dashboard-container"
+            aria-label="Interactive Power BI dashboard"
+        >
+            <iframe
+                title="MLB Dashboard"
+                src="https://app.powerbi.com/reportEmbed?reportId=7b7da8a8-00ae-4d66-bb33-e2d0ba8195bf&autoAuth=true&ctid=170bbabd-a2f0-4c90-ad4b-0e8f0f0c4259"
+                allowfullscreen="true">
+            </iframe>
+        </section>
+
+        <section class="project-links">
+            <a
+                class="button"
+                href="Visualizing Baseball Metrics in Power BI/Baseball VIZ Project 1.0.pdf"
+                target="_blank"
+                rel="noopener"
+            >
+                View PDF Report
+            </a>
+
+            <a
+                class="button"
+                href="https://github.com/jtyran/PowerBI-Data-Analytics-Projects"
+                target="_blank"
+                rel="noopener"
+            >
+                View GitHub Repository
+            </a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Tyran Johnson. All rights reserved.</p>
+    </footer>
 </body>
 </html>
